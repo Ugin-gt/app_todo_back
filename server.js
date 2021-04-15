@@ -5,6 +5,7 @@ const server = http.createServer(app);
 
 const port = process.env.PORT || 3000;
 
-server.listen(port, () => {
-  console.log(`APP started on port ${port}`);
+server.listen(port, (err) => {
+  if (err) console.error('❌ Unable to connect the server: ', err);
+    console.log(`🌍 Server listening on port ${port}`);
 });
