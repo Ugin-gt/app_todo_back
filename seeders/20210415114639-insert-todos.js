@@ -12,16 +12,16 @@ module.exports = {
 
     const todos = users
       .map(u => {
-        return new Array(_.random(1, 10, false)).fill(null).map((_, i) => ({
+        return new Array(_.random(1, 7, false)).fill(null).map((_, i) => ({
           user_id: u.id,
-          body: `Testbody${i}`,
+          body: `Todo's body${i}`,
           created_at: new Date(),
           updated_at: new Date(),
         }));
       })
       .flat(2);
 
-    queryInterface.bulkInsert('tasks', todos, {});
+    queryInterface.bulkInsert('todos', todos, {});
   },
 
   down: async (queryInterface, Sequelize) => {},
