@@ -18,7 +18,6 @@ module.exports = (sequelize, DataTypes) => {
         validate: {
           notNull: true,
           notEmpty: true,
-          is: /^[\wА-я]{2,}$/,
         },
       },
       isDone: {

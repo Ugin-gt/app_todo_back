@@ -1,1 +1,1 @@
-GET http://localhost:3000/api/todos/4
+GET http://localhost:3000/api/todos/users/4 HTTP/1.1

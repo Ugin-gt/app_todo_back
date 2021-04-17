@@ -37,7 +37,6 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         type: DataTypes.STRING(128),
         validate: {
-          is: /^[\wА-я]{2,}$/,
           notNull: true,
           notEmpty: true,
           isEmail: true,
